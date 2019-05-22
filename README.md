@@ -1,15 +1,15 @@
-# Service Interace for vehicle use
+# Service Interface for vehicle use
 
-Service Interace for vehicle use (SIVU) is a data specification for free-floating vehicles providers REST API. 
+Service Interface for vehicle use (SIVU) is an API and data specification for free-floating vehicles providers REST API. 
 SIVU must be used by all operators that signed the charter "vélo/2RM libre-service" of the city of Paris. 
 
 ## Contents
 + [Charter Specification](#charter-specification)
-+ API Specification
-+ Data Specification
++ [API Specification](#api-specification)
++ [Data Specification](#data-specification)
 
 ## Charter Specification
-
+The operators that signed 
 
 ## API Specification
 

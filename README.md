@@ -17,7 +17,7 @@ the token must be given by the operator to the city of Paris.<br>
 The response returns by the API has to be a JSON or XML file **without pagination**. 
 
 ### Example
-If the city of Paris makes an HTTP GET request to, let's say XYZ's SIVU API returning JSON file, every JSON object from the response file must be as follows :
+If the city of Paris makes an HTTP GET request on Wednesday, 22 May 2019 at noon to, let's say XYZ's SIVU API returning JSON file, every JSON object from the response file must have the following specification :
 
 ```json
   {
@@ -32,7 +32,7 @@ If the city of Paris makes an HTTP GET request to, let's say XYZ's SIVU API retu
 ```
 
 ### HTTP response status code
-The SIVU API has to return a status code as follows : 
+The SIVU API has to return a status code as specified in HTTP/1.1 standard ([RFC 7231](https://tools.ietf.org/html/rfc7231)) : 
 
 | Status code  |       Description       |
 | -----------  |  ---------------------  |
@@ -54,7 +54,37 @@ The SIVU API has to return a status code as follows :
 | marker_time       |    ISO 8601     |   
 | longitude-x       |    Float        |  
 | latitude-y        |    Float        |   
-| vehicle_type      |    String       |   
-| vehicle_activity  |    String       |  
+| vehicle_type      |    Enum         |   
+| vehicle_activity  |    Enum         |  
 
 ### Vehicle_type
+
+|vehicle_type|
+| ---------- |
+| scooter    |
+| motorscoot |
+| bike       |
+
+### Vehicle_activity
+
+| vehicle_activity |              description                   |   
+| ---------------- |  --------------------------------------    |  
+| parking          | a functional vehicule                      |
+| riding           | a vehicle is currently used by a customer  |
+| nok              | not ok, a vehicle is not functional        |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

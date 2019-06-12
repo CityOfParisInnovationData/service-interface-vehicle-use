@@ -1,23 +1,26 @@
 # Service Interface for Vehicle Use
 Service interface for vehicle use (SIVU) is a data specification for free-floating vehicles providers REST API. 
 SIVU must be used by all operators that signed the charter "vélo/2RM libre-service" of the city of Paris. 
+This specification only concerns vehicles on public space. 
 
 ## Contents
 + [Charter Specification](#charter-specification)
-+ [API Specification](#api-specification)
++ [Vehicle Monitoring](#vehicle-monitoring)
 + [Data Specification](#data-specification)
 
 ## Charter Specification
 The operators that signed the charter of the city of Paris about vehicles in free-floating committed themselves to provide an authenticated REST API that provides their vehicle fleet information. 
 This charter commits the city of Paris to not share this information and to use it in a specific field of analysis. 
 
-## API Specification
-The API has to be an HTTP REST API that gives a total access to the whole vehicle fleet information as specified in [data specification](#data-specification). This information has to be in real time or at regular interval of 3 hours starting midnight. The login/pass or 
-the token must be given by the operator to the city of Paris.<br>
-The response returns by the API has to be a JSON or XML file **without pagination**. 
+## Vehicle Monitoring
 
-### Example
-If the city of Paris makes an HTTP GET request on Wednesday, 22 May 2019 at noon to, let's say XYZ's SIVU API returning JSON file, every JSON object from the response file must have the following specification :
+### API Specification
+The SIVU API is an HTTP REST API that gives a total access to the whole vehicle fleet information as specified in [data specification](#data-specification). This information has to be in real time or at regular interval of 3 hours starting midnight. The login/pass or 
+the token must be given by the operator to the city of Paris.<br>
+The response returns by the API is a JSON file **without pagination**. 
+
+### Schema
+Every JSON object from the response file have the following schema :
 
 ```json
   {
@@ -32,7 +35,7 @@ If the city of Paris makes an HTTP GET request on Wednesday, 22 May 2019 at noon
 ```
 
 ### HTTP response status code
-The SIVU API has to return a status code as specified in HTTP/1.1 standard ([RFC 7231](https://tools.ietf.org/html/rfc7231)) : 
+The SIVU API returns a status code as specified in HTTP/1.1 standard ([RFC 7231](https://tools.ietf.org/html/rfc7231)) : 
 
 | Status code  |       Description       |
 | -----------  |  ---------------------  |
@@ -46,6 +49,7 @@ The SIVU API has to return a status code as specified in HTTP/1.1 standard ([RFC
 
 
 ## Data Specification
+Requests are made with HTTP GET and the **vehicle-monitoring** endpoint. 
 
 |      Attribute    |    Value Type   |  
 | :---------------- |:-------------:  | 
@@ -71,20 +75,8 @@ The SIVU API has to return a status code as specified in HTTP/1.1 standard ([RFC
 | ---------------- |  --------------------------------------    |  
 | parking          | a functional vehicule                      |
 | riding           | a vehicle is currently used by a customer  |
-| nok              | not ok, a vehicle is not functional        |
+| nok              | not ok, a vehicle is not functional on public space<sup>*</sup>|
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<sup>*</sup>All vehicles in maintenance in private storage space does not appear. 
 
 

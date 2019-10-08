@@ -1,7 +1,6 @@
 # Service Interface for Vehicle Use
 Service interface for vehicle use (SIVU) is a data specification for free-floating vehicles providers REST API. 
 SIVU must be used by all operators that signed the charter "vélo/2RM libre-service" of the city of Paris. 
-This specification only concerns vehicles on public space. 
 
 ## Contents
 + [Charter Specification](#charter-specification)
@@ -76,6 +75,7 @@ Requests are made with HTTP GET and the **vehicle-monitoring** endpoint.
 | parking          | a functional vehicule                      |
 | riding           | a vehicle is currently used by a customer  |
 | nok              | not ok, a vehicle is not functional on public space<sup>*</sup>|
+| removed          | a vehicule is removed from public space |
 
 <sup>*</sup>All vehicles in maintenance in private storage space does not appear. 
 

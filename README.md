@@ -64,9 +64,9 @@ Requests are made with HTTP GET and the **vehicle-monitoring** endpoint.
 
 |vehicle_type|
 | ---------- |
-| scooter    |
-| motorscoot |
-| bike       |
+| [scooter](https://en.wikipedia.org/wiki/Motorized_scooter)    |
+| [motorscoot](https://fr.wikipedia.org/wiki/Scooter) |
+| [bike](https://en.wikipedia.org/wiki/Bicycle)       |
 
 ### Vehicle_activity
 

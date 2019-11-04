@@ -1,0 +1,58 @@
+{
+  "fields": [
+    {
+      "name": "operator_name",
+      "title": "Operator's name of the vehicule",
+      "type": "string",
+       "constraints": {
+      "required": true
+      }
+    },
+    {
+      "name": "marker_time",
+      "type": "datetime",
+      "description": "Last datetime for a vehicule at this geograhic position ",
+       "constraints": {
+      "required": true
+      }
+    },
+    {
+      "name": "vehicle_id",
+      "type": "string",
+       "constraints": {
+          "required": true,
+          "unique": true
+      }
+      },
+    {
+      "name": "longitude_x",
+      "type": "number",
+       "constraints": {
+      "required": true
+      }
+      },
+    {
+      "name": "latitude_y",
+      "type": "number",
+       "constraints": {
+      "required": true
+      }
+      },
+    {
+      "name": "vehicle_activity",
+      "type": "string",
+       "constraints": {
+      "required": true,
+      "enum": ["parking", "riding", "nok", "removed"]
+      }
+      },
+    {
+      "name": "vehicle_type",
+      "type": "string",
+       "constraints": {
+      "required": true,
+      "enum": ["scooter", "motorscoot", "bike"]
+      }
+    }
+  ]
+}

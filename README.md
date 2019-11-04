@@ -6,6 +6,7 @@ SIVU must be used by all operators that signed the charter "vélo/2RM libre-serv
 + [Charter Specification](#charter-specification)
 + [Vehicle Monitoring](#vehicle-monitoring)
 + [Data Specification](#data-specification)
++ [Data Validation](#data-validation)
 
 ## Charter Specification
 The operators that signed the charter of the city of Paris about vehicles in free-floating committed themselves to provide an authenticated REST API that provides their vehicle fleet information. 
@@ -24,7 +25,7 @@ Every JSON object from the response file have the following schema :
 ```json
   {
     "operator_name": "XYZ",
-    "marker_time": "20190622-12:00:00",
+    "marker_time": "20190411T12:00:00+01:00",
     "vehicle_id": 00001,
     "longitude-x": 2.357163,
     "latitude-y": 48.822855,
@@ -79,4 +80,7 @@ Requests are made with HTTP GET and the **vehicle-monitoring** endpoint.
 
 <sup>*</sup>All vehicles in maintenance in private storage space does not appear. 
 
+## Data Validation
+
+Before sending, operators should validate their data with an application like [goodtables.io](https://goodtables.io/). To do this, they will use the table schema [schema.json](https://github.com/CityOfParisInnovationData/service-interface-vehicle-use/edit/master/schema.json). 
 

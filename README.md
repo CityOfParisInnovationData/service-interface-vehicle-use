@@ -54,7 +54,7 @@ Requests are made with HTTP GET and the **vehicle-monitoring** endpoint.
 |      Attribute    |    Value Type   |  
 | :---------------- |:-------------:  | 
 | operator_name     |    String       |   
-| vehicle_id        |    UUID         |   
+| vehicle_id        |    UID          |   
 | marker_time       |    ISO 8601     |   
 | longitude-x       |    Float        |  
 | latitude-y        |    Float        |   

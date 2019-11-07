@@ -27,8 +27,8 @@ Every JSON object from the response file have the following schema :
     "operator_name": "XYZ",
     "marker_time": "20190411T12:00:00+01:00",
     "vehicle_id": 00001,
-    "longitude-x": 2.357163,
-    "latitude-y": 48.822855,
+    "longitude_x": 2.357163,
+    "latitude_y": 48.822855,
     "vehicle_activity": "parking",
     "vehicle_type": "scooter"
   }
